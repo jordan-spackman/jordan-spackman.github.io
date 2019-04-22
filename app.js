@@ -34,7 +34,7 @@ var authenticateUser = function (email, pword) {
   var data = "email=" + encodeURIComponent(email);
   data += "&pword=" + encodeURIComponent(pword);
 
-  fetch("https://reading-list-deploy.herokuapp.com/users/sessions", {
+  fetch("http://reading-list-deploy.herokuapp.com/users/sessions", {
     credentials: 'include',
     method: 'POST',
     body: data,
@@ -82,7 +82,7 @@ var createUser = function (fname, lname, email, pword) {
   data += "&email=" + encodeURIComponent(email);
   data += "&pword=" + encodeURIComponent(pword);
 
-  fetch("https://reading-list-deploy.herokuapp.com/users", {
+  fetch("http://reading-list-deploy.herokuapp.com/users", {
     credentials: 'include',
     method: 'POST',
     body: data,
@@ -109,7 +109,7 @@ var createBook = function (name, author, fvnf, topic, isbn) {
   data += "&topic=" + encodeURIComponent(topic);
   data += "&isbn=" + encodeURIComponent(isbn);
 
-  fetch("https://reading-list-deploy.herokuapp.com/reading_list", {
+  fetch("http://reading-list-deploy.herokuapp.com/reading_list", {
     credentials: 'include',
     method: 'POST',
     body: data,
@@ -123,7 +123,7 @@ var createBook = function (name, author, fvnf, topic, isbn) {
 };
 
 var deleteBook = function (id) {
-  fetch("https://reading-list-deploy.herokuapp.com/reading_list/${id}", {
+  fetch("http://reading-list-deploy.herokuapp.com/reading_list/${id}", {
     credentials: 'include',
     method: 'DELETE',
     headers: {
@@ -142,7 +142,7 @@ var updateBook = function (id, name, author, fvnf, topic, isbn) {
   data += "&topic=" + encodeURIComponent(topic);
   data += "&isbn=" + encodeURIComponent(isbn);
 
-  fetch("https://reading-list-deploy.herokuapp.com/reading_list/${id}", {
+  fetch("http://reading-list-deploy.herokuapp.com/reading_list/${id}", {
     credentials: 'include',
     method: 'PUT',
     body: data,
@@ -177,7 +177,7 @@ theButton.onclick = function () {
 };
 
 var getBooks = function () {
-  fetch("https://reading-list-deploy.herokuapp.com/reading_list", {
+  fetch("http://reading-list-deploy.herokuapp.com/reading_list", {
     credentials: 'include'
   }).then(function (response) {
     if (response.status == 401){
