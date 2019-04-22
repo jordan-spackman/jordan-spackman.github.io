@@ -1,1 +1,167 @@
-Hello World
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Reading List</title>
+  </head>
+
+  <body>
+
+    <div id = "loginhide">
+      <form>
+        <h2>Welcome!</h2>
+        <div class="loginimgcontainer">
+            <img src="login_book.jpg" alt= "book" class="login-image">
+        </div>
+        <div class="login-container">
+          <div class = "alert_failure_login" id = "failure_login">
+              <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+              Login Failed. Try again.
+          </div>
+
+          <div class="alert_success" id = "success">
+              <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+              Account succesfully created! Please log in.
+          </div>
+  
+          <label for="email"><b>E-mail</b></label>
+          <div class="input_bar">
+          <input type="text" placeholder="Enter E-mail" id="email" required>
+          </div>
+  
+          <label for="pword"><b>Password</b></label>
+          <div class ="input_bar">
+          <input type="password" placeholder="Enter Password" id="pword" required>
+          </div>
+
+          <button id="login-button">Login</button>
+            <br>
+            
+            <h3 id="createaccount">Not registered? <button id="register-button">Create an account</button> </h3>
+
+            <div id="RegisterModal" class="modal">
+              
+              <div class="modal-content">
+                <span class="close">&times;</span>
+              
+                <form>
+                  <h2>Create and account</h2>
+                  <div class="login-container">
+
+                      <div class="alert_failure_create" id = "failure_create">
+                          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                          Account already exists. Try logging in.
+                      </div>
+
+                    <label for="fname"><b>First Name</b></label>
+                    <div class="input_bar">
+                    <input type="text" placeholder="Enter First Name" id="fname" required>
+                    </div>
+
+                    <label for="lname"><b>Last Name</b></label>
+                    <div class="input_bar">
+                    <input type="text" placeholder="Enter Last Name" id="lname" required>
+                    </div>
+            
+                    <label for="regemail"><b>E-mail</b></label>
+                    <div class="input_bar">
+                    <input type="text" placeholder="Enter E-mail" id="regemail" required>
+                    </div>
+            
+                    <label for="regpword"><b>Password</b></label>
+                    <div class ="input_bar">
+                    <input type="password" placeholder="Enter Password" id="regpword" required>
+                    </div>
+          
+                    <button id="createaccount-button">Create account</button>
+          
+                      <!-- The Modal -->
+                      <div id="createaccountModal" class="modal">
+          
+                        <span class="close">&times;</span>
+
+                      </div>
+                  </div>
+                </form>
+
+              </div>
+
+            </div>
+        </div>
+      </form>
+    </div>
+      
+    <div id = "hide">
+      <div class="header">
+        <div class="logo">
+          Reading List
+        </div>
+          <div class="menu">
+              <a href="index.html" class="link">
+                  <div class="title">Home</div>
+                </a>
+            <a href="MyLists.html" class="link">
+              <div class="title">My Lists</div>
+            </a>
+            <a href="about.html" class="link">
+              <div class="title">About</div>
+            </a>
+            <a href="contact.html" class="link">
+              <div class="title">Contact</div>
+            </a>
+          </div>
+      </div>
+      
+      <div class="wrapper">
+    
+        <h1>“You don't have to burn books to destroy a culture. Just get people to stop reading them.” 
+          ― Ray Bradbury</h1>
+        <h2>
+          Add Book:
+        </h2>
+        <div class="input_bar">
+          Name: <input type="text" id="name">
+        </div>
+        <div class="input_bar">
+          Author: <input type="text" id="author">
+        </div>
+        <div class ="input_bar">
+          fvnf: <input type="text" id="fvnf">      
+        </div>
+        <div class="input_bar">
+          Topic: <input type="text" id="topic">
+        </div>
+        <div class="input_bar">
+          ISBN: <input type="text" id="isbn">
+        </div>
+       <button id="the-button">Add</button>
+  
+        <h2>
+        Update Book:
+        </h2>
+        <div class="input_bar">
+        Name: <input type="text" id="updatename">
+        </div>
+        <div class="input_bar">
+        Author: <input type="text" id="updateauthor">
+       </div>
+        <div class="input_bar">
+        fvnf: <input type="text" id="updatefvnf">      
+       </div>
+       <div class="input_bar">
+        Topic: <input type="text" id="updatetopic">
+        </div>
+        <div class="input_bar">
+        ISBN: <input type="text" id="updateisbn">
+        </div>
+   
+        <h3>Your Reading List:</h3>
+        <ol id="book_list">
+  
+        </ol>
+        <script src="app.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
