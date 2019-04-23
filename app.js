@@ -272,6 +272,8 @@ var getBooks = function () {
   });
 };
 
+//this needs to be pushed
+
 // first load the reading_list when the page loads
 getBooks();
 
